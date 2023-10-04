@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    background-color: rgb(52, 161, 197);
+    font-family: 'Roboto', sans-serif;
+}
+
+.DivTitle {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    width: 750px;
+    max-width: 100%;
+    margin: 10px auto 30px;
+    text-shadow: 2px 2px black;
+    border-bottom: solid 4px white;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background-color: rgb(241, 132, 30);
+}
+
+.DivPrimary {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(231, 122, 20);
+    color: white;
+    border: 2px white solid;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 100%;
+    margin: 10px auto 10px;
+    padding: 15px;
+}
+
+.DivPrimary:hover {
+    background-color: rgb(241, 132, 30);
+    cursor: pointer;
+}
+
+.Title {
+    font-size: 2.8rem;
+    color: white;
+    margin: 10px 0;
+}
+
+.H2 {
+    font-size: 1.8rem;
+}
+
+.DivTitle>.H3 {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: rgb(241, 241, 241);
+    text-shadow: none;
+    width: fit-content;
+    margin: auto;
+}
+
+.DivTitle>.H3:hover {
+    color: rgb(206, 206, 206);
+}
+
+.DivSecondary {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: fit-content;
+}
+
+.DivSecondary:hover {
+    background-color: rgb(64, 64, 64);
+    cursor: pointer;
+}
+
+.DivSecondary>img {
+    border: solid 2px white;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.DivSecondary {
+    text-decoration: none;
+
+}
+
+.Container {
+    margin: 80px auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.PlaceHolderImg {
+    width: 300px;
+    height: 200px;
+    margin: 1% auto;
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 8px;
+}
+
+.ButtonContainer {
+    margin: 80px auto 200px;
+}
+
+footer {
+    font-size: 0.9rem;
+    background-color: rgb(231, 122, 20);
+    border-top: solid 2px white;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 10px
+}

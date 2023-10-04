@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+.GridContainer {
+    margin: 10px auto 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1600px;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto; */
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@media screen and (max-width: 1600px) {
+    .GridContainer {
+        width: 90%;
+    }
+}
+
+#StartGui {
+    background-color: rgb(231, 122, 20);
+    border: solid 2px white;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 500px;
+    margin: 80px auto 0;
+}
+
+#StartGui>h2 {
+    margin-bottom: 10px
+}
+
+#StartGui>p {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+#StartGui>input {
+    font-size: 20px;
+    text-align: center;
+}
+
+.BasicButton {
+    margin: 20px auto 0;
+    width: 100px;
+    cursor:pointer;
+    padding: 5px 8px;
+    border: solid 2px white;
+    border-radius: 8px;
+    background-color: rgb(53, 53, 53);
+}
+
+.Card {
+    width: 200px;
+    margin: 15px;
+    /* padding: 10px;
+    background-color: red; */
+}
+
+.Card>img {
+    width: 100%;
+}
+
+.CardHidden {
+    visibility: hidden;
+    width: 200px;
+    margin: 15px;
+}
+
+.CardHidden>img {
+    width: 100%;
+}
+
+.Replay {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    margin: 5% auto;
+    text-align: center;
+    border: solid 2px white;
+    background-color: rgb(231, 122, 20);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.Replay>button {
+    margin: 15px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(50, 50, 50);
+    border: solid 2px white;
+    border-radius: 8px;
+
+}
+
+.Replay>button:hover {
+    background-color: rgb(68, 68, 68);
+}
