@@ -5,9 +5,11 @@
     padding: 0;
 }
 
-body {
+body, html {
     background-color: rgb(52, 161, 197);
     font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
 .DivTitle {
@@ -19,10 +21,11 @@ body {
     font-family: 'Roboto', sans-serif;
     color: white;
     width: 750px;
-    max-width: 100%;
+    max-width: 99%;
     margin: 10px auto 30px;
     text-shadow: 2px 2px black;
-    border-bottom: solid 4px white;
+    border: 2px solid white;
+    border-bottom: solid 8px white;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
     background-color: rgb(241, 132, 30);
@@ -34,9 +37,9 @@ body {
     background-color: rgb(231, 122, 20);
     color: white;
     border: 2px white solid;
-    border-radius: 10px;
-    width: 500px;
-    max-width: 100%;
+    /* border-radius: 10px; */
+    /* width: 750px;
+    max-width: 100%; */
     margin: 10px auto 10px;
     padding: 15px;
 }
@@ -46,14 +49,60 @@ body {
     cursor: pointer;
 }
 
+.ButtonContainer {
+    margin: 60px auto 0px;
+    width: 750px;
+    max-width: 100%;
+}
+
+.AltButtonParent {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(231, 122, 20);
+    color: white;
+    margin: 10px auto 10px;
+    border: solid 2px white;
+    border-radius: 8px;
+    max-width: 90%;
+    
+}
+
+.AltButtonParent:hover {
+    background-color: rgb(241, 132, 30);
+    cursor: pointer;
+}
+
+.AltButton {
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: flex;
+    padding: 10px 0;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.AltButton:link, .AltButton:visited {
+    color: white;
+}
+
+.AltButton:hover {
+    color: white;
+}
+
+.AltButton:active {
+    color: white;
+}
+
 .Title {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     color: white;
     margin: 10px 0;
 }
 
 .H2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem
 }
 
 .DivTitle>.H3 {
@@ -79,7 +128,8 @@ body {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    width: fit-content;
+    width: 400px;
+    text-decoration: none;
 }
 
 .DivSecondary:hover {
@@ -88,18 +138,25 @@ body {
 }
 
 .DivSecondary>img {
+    width: 90%;
+    height: auto;
     border: solid 2px white;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
 
-.DivSecondary {
-    text-decoration: none;
-
+.DivSecondary>h3 {
+    background-color: rgb(231, 122, 20);
+    border: solid 2px white;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 0;
 }
 
 .Container {
-    margin: 80px auto;
+    margin: 40px auto;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -116,8 +173,9 @@ body {
     border-radius: 8px;
 }
 
-.ButtonContainer {
-    margin: 80px auto 200px;
+.Wrapper {
+    min-height: 100%;
+    margin-bottom: -60px;
 }
 
 footer {
@@ -127,7 +185,32 @@ footer {
     color: white;
     text-align: center;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    padding: 10px
+    max-width: 100%;
+    height: 60px;
+    /* height: 50px; */
+    /* position: fixed; */
+    /* bottom: 0;*/
+    /* padding: 10px 0;  */
+}
+
+footer>h2 {
+    margin-top: 15px;
+}
+
+.push {
+    height: 60px;
+}
+
+#HButton1 {
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+
+#HButton2 {
+    /* border: solid 2px white; */
+}
+
+#HButton3 {
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
 }

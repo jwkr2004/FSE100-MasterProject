@@ -1,0 +1,30 @@
+#myCanvas {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.canvasParent {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+#Target {
+    position: relative;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: white ;
+    border: solid 2px black;
+    border-radius: 100px;
+}
+
+#Container {
+    width: 1000px;
+    height: 600px;
+    border: solid 1px white;
+    background-color: rgb(70, 70, 70);
+    margin: 0 auto;
+    max-width: 90%;
+    max-height: 90%;
+}

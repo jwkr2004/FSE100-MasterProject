@@ -3,6 +3,12 @@
     flex-direction: column;
 }
 
+#timer {
+    margin: auto;
+    color: white;
+    font-size: 30px;
+}
+
 #StartGui {
     background-color: rgb(231, 122, 20);
     border: solid 2px white;
@@ -19,6 +25,12 @@
 
 #StartGui>p {
     font-size: 18px;
+    margin-bottom: 24px;
+}
+
+#StartGui>input {
+    font-size: 20px;
+    text-align: center;
 }
 
 .BasicButton {
@@ -34,34 +46,38 @@
 #TextContainer {
     border: solid 2px white;
     border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(68, 68, 68);
     display: none;
     flex-wrap: wrap;
-    margin: 20px auto;
+    justify-content: center;
+    margin: 20px auto 0;
     width: 1000px;
     max-width: 95%;
     padding: 10px;
+    font-weight: 300;
 }
 
 #TextContainer>.word {
     margin: 2px 0; 
     padding: 0 3px ;
-    font-size: 20px;
-    color: white;
+    font-size: 24px;
 }
 
 @media screen and (max-width: 1100px) {
     #TextContainer>.word {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
 
 @media screen and (max-width: 450px) {
     #TextContainer>.word {
-        font-size: 16px;
+        font-size: 18px;
     }
+}
+
+.word {
+    color: white;
 }
 
 .InputContainer {
@@ -71,18 +87,21 @@
 }
 
 .UserInput {
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(53, 53, 53);
 }
 
 #UserInput  {
     font-size: 20px;
     text-align: center;
-    margin: 10px auto 100px;
+    margin: 5px auto 100px;
+    padding: 4px 10px;
     border: solid 2px white;
+    border-bottom-left-radius: 20px;
     color: white;
-    width: 550px;
     height: 30px;
+    width: 1000px;
     max-width: 95%;
+    font-weight: 600;
 }
 
 #UserInput::placeholder {
@@ -94,8 +113,9 @@
 }
 
 #RestartGui {
-    width: 550px;
-    padding: 20px;
+    width: 1000px;
+    max-width: 95%;
+    padding: 20px 10px;
     margin: 10px auto 100px;
     text-align: center;
     border: solid 2px white;

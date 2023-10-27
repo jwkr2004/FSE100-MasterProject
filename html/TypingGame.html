@@ -5,33 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human Improvement - Game</title>
     <script src="../js/main.js"></script>
-    <script src="../js/TypingGame.js"></script>
+    <script src="../js/TypingGame.js" type="module"></script>
     <link rel="stylesheet" href="../css/main.css"/>
     <link rel="stylesheet" href="../css/TypingGame.css"/>
 </head>
 <body>
-    <div class="DivTitle">
-        <h1 class="Title">Typing Game</h1>
-        <a class="H3" href="../index.html">Return Home</a>
-    </div>
-    <div class="GridContainer">
-        <div id="TextContainer"></div>
-        <div class="InputContainer" id="InputContainer">
-            <div id="StartGui">
-                <h2>How To Play</h2>
-                <p>Your goal is to type as fast as possible until you have typed all of the words in the paragraph. When you type in the input box, it will detect whether or not the input is correct compared to the words on the screen on screen</p>
-                <div class="BasicButton" id="StartGame">Start Game</div>
-            </div>
-            <input type="text" id="UserInput" name="userInput" placeholder="Type Here" class="UserInput" hidden>
-            <div id="RestartGui" hidden>
-                <h2>Game Over</h2>
-                <h3 id="words"></h3>
-                <h3 id="seconds"></h3>
-                <h3 id="wpm"></h3>
-                <div class="BasicButton" id="RestartGame">Play Again</div>
-            </div>
+    <div class="Wrapper">
+        <div class="DivTitle">
+            <h1 class="Title">Typing Game</h1>
+            <a class="H3" href="../index.html">Return Home</a>
         </div>
+        <div class="GridContainer">
+            <p id="timer" hidden>0</p>
+            <div id="TextContainer"></div>
+            <div class="InputContainer" id="InputContainer">
+                <div id="StartGui">
+                    <h2>How To Play</h2>
+                    <p>In this activity, your goal is to type out all of the words on the screen as fast as possible. You can select the number of words that you want to use below.</p>
+                    <h2>Enter Number of Words</h2>
+                    <input id="wordNumber" class="wordNumber" type="number" min="1" max="100" value="40"/>
+                    <div class="BasicButton" id="StartGame">Start Game</div>
+                </div>
+                <input type="text" id="UserInput" name="userInput" placeholder="Type Here" class="UserInput" hidden>
+                <div id="RestartGui" hidden>
+                    <h3 id="words"></h3>
+                    <h3 id="seconds"></h3>
+                    <h3 id="wpm"></h3>
+                    <div class="BasicButton" id="RestartGame">Play Again</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="push"></div> 
     </div>
+    
     <footer>
         <h2>
             &copy; 2023 Da Boys Ltd. | All Rights Reserved
