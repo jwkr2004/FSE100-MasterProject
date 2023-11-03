@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Improvement - Game</title>
+    <title>Human Improvement - Memory Matcher</title>
     <script src="../js/main.js"></script>
     <script src="../js/MemoryGame.js"></script>
     <link rel="stylesheet" href="../css/main.css"/>
@@ -12,8 +12,12 @@
 <body>
     <div class="Wrapper">
         <div class="DivTitle">
-            <h1 class="Title">Memory Game</h1>
+            <h1 class="Title">Memory Matcher</h1>
             <a class="H3" href="../index.html">Return Home</a>
+        </div>
+        <div class="numbers">
+            <p id="timer" hidden>0</p>
+            <p id="score" hidden>0</p>
         </div>
         <div class="GridContainer" id="CardContainer"></div>
         <div id="StartGui">
@@ -23,6 +27,12 @@
             <input id="cardNumber" class="cardNumber" type="number" min="2" max="104" value="12"/>
             <div class="BasicButton" id="StartGame">Start Game</div>
         </div>
+        <audio id="CardFlip" hidden>
+            <source src="../sounds/CardFlip.mp3" type="audio/mp3">
+        </audio>
+        <audio id="WinGame" hidden>
+            <source src="../sounds/WinGame.mp3" type="audio/mp3">
+        </audio>
         <div class="push"></div>
     </div>
             

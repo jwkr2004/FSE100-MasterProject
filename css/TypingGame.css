@@ -3,11 +3,11 @@
     flex-direction: column;
 }
 
-#timer {
+/* #timer {
     margin: auto;
     color: white;
     font-size: 30px;
-}
+} */
 
 #StartGui {
     background-color: rgb(231, 122, 20);
@@ -142,4 +142,10 @@
 
 .redB {
     background-color: rgb(247, 72, 72);
+}
+
+.highlight {
+    /* background-color: rgb(235, 235, 91); */
+    /* text-decoration: underline 4px orange; */
+    border-bottom: rgb(231, 122, 20) solid 4px;
 }

@@ -7,7 +7,7 @@ let numberOfCards = 0;
 let clickCount = 0;
 
 let noClick = false;
- 
+
 
 window.addEventListener("load", () => {
     document.getElementById("StartGame").addEventListener("click", () => {
@@ -42,6 +42,17 @@ window.addEventListener("load", () => {
         }
     });
 });
+
+function playSound(cond) {
+    if(cond === "Flip") {
+        document.getElementById("CardFlip").load();
+        document.getElementById("CardFlip").play();
+    }
+    if(cond === "Win") {
+        document.getElementById("WinGame").load();
+        document.getElementById("WinGame").play();
+    }
+}
 
 function createCards(numCards) {
     for(var i = 0; i < numCards; i++) {
@@ -110,6 +121,7 @@ function clickCard(event) {
         let div = event.currentTarget;
         let cardNum = div.id.substring(1);
         if(cardData[cardNum].revealed === false) {
+            playSound("Flip")
             clickCount++
             cardData[cardNum].revealed = true
             setCards();
@@ -138,7 +150,7 @@ function createCardType() {
 
 function checkWin() {
     if(cardData.filter(element => element.exists === false).length === numberOfCards) { 
-        console.log("test");
+        playSound("Win");
         let buttonContainer = document.createElement("div");
         let button = document.createElement("button");
         let h2 = document.createElement("h2");
@@ -151,7 +163,10 @@ function checkWin() {
         buttonContainer.appendChild(h2);
         buttonContainer.appendChild(button);
 
-        document.getElementById("CardContainer").appendChild(buttonContainer);        
+        document.getElementById("CardContainer").appendChild(buttonContainer); 
+        document.getElementById("CardHidden").forEach((value) => {
+            value.style.display = "none";
+        });       
     }
 }
 

@@ -18,7 +18,10 @@
 //     console.log("Square: " + x, y);
 // }
 
+var score = 0;
+var seconds = 20;
 var Counter = 0;
+var timerStarted = false;
 var containerWidth;
 var containerHeight;
 var shapeWidth;
@@ -26,6 +29,10 @@ var shapeHeight;
 
 window.addEventListener("load", () => {
     document.getElementById("Target").addEventListener("click", setPosition);
+    document.getElementById("Target").addEventListener("click", clickTarget);
+    document.getElementById("timer").innerText = seconds;
+    document.getElementById("timer").hidden = false;
+    document.getElementById("score").hidden = false;
     setPosition();
 });
 
@@ -43,4 +50,27 @@ function setPosition() {
     document.getElementById("Target").style.top= y + "px";
     Counter++;
     console.log(Counter);
+}
+
+function clickTarget() {
+    if(timerStarted === false) {
+        startTimer();
+        timerStarted = true;
+    }
+    if(seconds > 0) {
+        score++;
+        document.getElementById("score").innerText = score;
+    }
+}
+
+function startTimer() {
+    timer = setInterval(()=> {
+        seconds = Math.round((seconds - 0.1) * 10) / 10;
+        if((Math.round(seconds * 10) / 10) % 1 == 0){
+            document.getElementById("timer").innerText = seconds;
+        }
+        if(seconds <= 0) {
+            clearInterval(timer);
+        }
+    }, 100);
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Improvement - Game</title>
+    <title>Human Improvement - Target Tracker</title>
     <script src="../js/main.js"></script>
     <script src="../js/AimGame.js"></script>
     <link rel="stylesheet" href="../css/main.css"/>
@@ -12,8 +12,18 @@
 <body>
     <div class="Wrapper">
         <div class="DivTitle">
-            <h1 class="Title">Tracking Game</h1>
+            <h1 class="Title">Target Tracker</h1>
             <a class="H3" href="../index.html">Return Home</a>
+        </div>
+        <div class="numbers">
+            <div>
+                <p class="text">Time Left: </p>
+                <p id="timer" hidden>0</p>
+            </div>
+            <div>
+                <p class="text">Score: </p>
+                <p id="score" hidden>0</p>
+            </div>
         </div>
 
         <!-- <div class="canvasParent">
@@ -21,7 +31,9 @@
         </div> -->
 
         <div id="Container">
-            <div id="Target"></div>
+            <div id="Target">
+                <img id="TargetImg" src="../images/Target.png">
+            </div>
         </div>
     
         <div class="push"></div>
