@@ -17,7 +17,9 @@
     background-color: white ;
     border: solid 2px black;
     border-radius: 100px;
+    user-select: none;
 }
+
 
 #Target>img {
     width: 100%;

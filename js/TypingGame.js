@@ -25,6 +25,7 @@ window.addEventListener("load", () => {
             generateParagraph();
             document.getElementById("UserInput").addEventListener("keyup", checkInput);
             document.getElementById("StartGui").hidden = true;
+            document.getElementById("Leaderboard").hidden = true;
             document.getElementById("UserInput").hidden = false;
             document.getElementById("timer").hidden = false;
             document.getElementById("timer").hidden = false;
@@ -43,37 +44,45 @@ window.addEventListener("load", () => {
         }
         
     });
-    // document.getElementById("AddToBoard").addEventListener("click", addToLeaderboard);
+    document.getElementById("AddToBoard").addEventListener("click", addToLeaderboard);
     checkInput();
+    loadLeaderboard();
 });
 
 function addToLeaderboard() {
-    var input = document.getElementById("name").value;
+    var input = document.getElementById("nameInput").value;
     var stats = {
         username : input,
         wpm : wpm,
     }
 
     localStorage.setItem("User" + localStorage.length, JSON.stringify(stats));
+    location.reload();
+}
 
+function loadLeaderboard() {
     let userArr = [];
 
     for(var i = 0; i < localStorage.length; i++) {
-        userArr[i] = localStorage.getItem("User" + i);
+        userArr[i] = JSON.parse(localStorage.getItem("User" + i));
     }
 
-    let sortedLeaderboard = userArr.sort((p1, p2) => (p1.wpm < p2.wpm) ? 1 : (p1.wpm > p2.wpm) ? -1 : 0);
-
-    console.log(sortedLeaderboard);
-
-    // localStorage.forEach((elem, index) => {
-    //     var p = document.createElement("p");
-    //     p.className = "word";
-    //     p.id = "p" + index;
-    //     p.innerText = elem;
-    //     document.getElementById("TextContainer").appendChild(p);
-    // });
-
+    if(userArr.length < 1) {
+        var h3 = document.createElement("h3");
+        h3.id = "Empty";
+        h3.innerText = "The Leaderboard is Currently Empty.";
+        document.getElementById("Scores").appendChild(h3);
+    }
+    
+    else {
+        userArr.forEach((elem, index) => {
+            var h3 = document.createElement("h3");
+            h3.className = "user";
+            h3.id = "u" + index;
+            h3.innerText = (index + 1) + ". "  + elem.username + " - " + elem.wpm + " WPM";
+            document.getElementById("Scores").appendChild(h3);
+        });
+    }
 }
 
 function playSound(cond) {
@@ -209,6 +218,8 @@ function checkInput(event) {
                 clearInterval(timer);
                 inp.hidden = true;
                 document.getElementById("RestartGui").hidden = false;
+                document.getElementById("NameEntry").hidden = false;
+                document.getElementById("Leaderboard").hidden = false;
                 document.getElementById("words").innerText = `There were: ${array.length} words.`;
                 document.getElementById("seconds").innerText = `It took you: ${Math.round(seconds * 100) / 100} seconds.`;
                 document.getElementById("wpm").innerText = `You typed at: ${wpm} wpm.`;

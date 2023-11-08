@@ -246,3 +246,93 @@ footer>h2 {
     border-bottom-right-radius: 16px;
     border-bottom-left-radius: 16px;
 }
+
+#NameEntry {
+    background-color: rgb(231, 122, 20);
+    border: solid 2px white;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 1000px;
+    margin: 20px;
+    max-width: 95%;
+}
+
+#NameEntry h2 {
+    margin-bottom: 10px
+}
+
+#NameEntry p {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+#NameEntry input {
+    font-size: 20px;
+    text-align: center;
+}
+
+#NameEntry .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#NameEntry>.flex>.BasicButton {
+    margin: 5px;
+}
+
+/* #NameEntry */
+
+#nameInput {
+    max-width: 95%;
+    border: solid 2px white;
+    border-radius: 8px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding: 5px 8px;
+    font-size: 16px;
+}
+
+.BasicButton {
+    margin: 20px auto 0;
+    width: 100px;
+    cursor:pointer;
+    padding: 5px 8px;
+    border: solid 2px white;
+    border-radius: 8px;
+    background-color: rgb(53, 53, 53);
+}
+
+#Leaderboard {
+    border: solid 2px white;
+    border-top-right-radius: 20px;
+    background-color: rgb(68, 68, 68);
+    /* display: none; */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto 0;
+    width: 1000px;
+    max-width: 95%;
+    padding: 10px;
+    font-weight: 300;
+    margin: 50px auto;
+}
+
+#Leaderboard h2 {
+    color: white;
+    text-align: center;
+    border-bottom: solid 2px white;
+    padding-bottom: 5px;
+}
+
+#Leaderboard h3 {
+    margin: 8px;
+    color: white;
+    text-align: center;
+}
+
+#Empty {
+    color: rgb(151, 151, 151);
+    font-weight: 200;
+}

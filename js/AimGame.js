@@ -28,8 +28,14 @@ var shapeWidth;
 var shapeHeight;
 
 window.addEventListener("load", () => {
-    document.getElementById("Target").addEventListener("click", setPosition);
-    document.getElementById("Target").addEventListener("click", clickTarget);
+    document.getElementById("Target").addEventListener("mousedown", setPosition);
+    document.getElementById("Target").addEventListener("mousedown", clickTarget);
+    document.getElementById("Target").addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+    });
+    document.getElementById("Container").addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+    });
     document.getElementById("timer").innerText = seconds;
     document.getElementById("timer").hidden = false;
     document.getElementById("score").hidden = false;
