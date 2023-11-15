@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
-.GridContainer {
-    margin: 10px auto 100px;
+#CardContainer {
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     width: 1600px;
@@ -13,12 +13,17 @@
 }
 
 @media screen and (max-width: 1600px) {
-    .GridContainer {
+    #CardContainer {
         width: 90%;
     }
 }
 
-#StartGui {
+/* #InputContainer {
+    position: absolute;
+    width: 100%;
+} */
+
+/* #StartGui {
     background-color: rgb(231, 122, 20);
     border: solid 2px white;
     padding: 10px;
@@ -40,7 +45,7 @@
 #StartGui>input {
     font-size: 20px;
     text-align: center;
-}
+} */
 
 .BasicButton {
     margin: 20px auto 0;
@@ -55,8 +60,28 @@
 .Card {
     width: 200px;
     margin: 15px;
+    /* border: solid 2px rgba(255, 255, 255, 1); */
+    display: flex;
     /* padding: 10px;
     background-color: red; */
+}
+
+@media screen and (max-width: 515px) {
+    .Card {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .Card {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .Card {
+        width: 75px;
+    }
 }
 
 .Card>img {
@@ -64,13 +89,20 @@
 }
 
 .CardHidden {
-    visibility: hidden;
+    /* visibility: hidden; */
     width: 200px;
     margin: 15px;
+    border-radius: 10px;
+    display: flex;
 }
 
 .CardHidden>img {
+    opacity: 0.25;
     width: 100%;
+}
+
+.CardImg:hover {
+    cursor: pointer;
 }
 
 .Replay {

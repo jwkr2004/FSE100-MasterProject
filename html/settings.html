@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human Improvement - Settings</title>
-    <script src="../js/main.js"></script>
     <link rel="stylesheet" href="../css/main.css"/>
+    <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    <link rel="stylesheet" id="cssTheme" href="">
+    <script src="../js/main.js"></script>
+    <script src="../js/Settings.js"></script>
 </head>
 <body>
     <div class="Wrapper">
@@ -13,8 +16,15 @@
             <h1 class="Title">Settings</h1>
             <a class="H3" href="../index.html">Return Home</a>
         </div>
-        <div>
-
+        <div class="ListContainer">
+            <h2>Theme Selector</h2>
+            <select>
+                <option id="red" value="red">Red and Black</option>
+                <option id="orange" value="orange">Orange and Blue</option>
+                <option id="light" value="light">Light</option>
+                <option id="dark" value="dark">Dark</option>
+            </select>
+            <div id="updateTheme">Update Theme</div>
         </div>
         <div class="push"></div>
     </div>

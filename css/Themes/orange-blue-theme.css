@@ -1,0 +1,172 @@
+* {
+    --primary: rgb(52, 161, 197);
+    --secondary: rgb(231, 122, 20);
+    --secondary10: rgb(241, 132, 30);
+    --tertiary: white;
+    --quaternary: rgb(240, 240, 240);
+    --quaternary-30: rgb(210, 210, 210);
+    --quinary: rgb(58, 58, 58);
+    --quinary10: rgb(68, 68, 68);
+    --senary: rgb(0, 0, 0);
+    --septenary: rgb(151, 151, 151);
+}
+
+body, html {
+    background-color: var(--primary);
+}
+
+.DivTitle {
+    color: var(--tertiary);
+    border: 2px solid var(--tertiary);
+    border-bottom: solid 8px var(--tertiary);
+    background-color: var(--secondary);
+}
+
+.DivTitle>.H3 {
+    color: var(--quaternary);
+}
+
+.DivTitle>.H3:hover {
+    color: var(--quaternary-30);
+}
+
+.DivPrimary {
+    background-color: var(--secondary);
+    border: 2px var(--tertiary) solid;
+}
+
+.DivPrimary:hover {
+    background-color: var(--secondary10);
+}
+
+#StartGui {
+    background-color: var(--secondary);
+    border: solid 2px var(--tertiary);
+    color: var(--tertiary);
+}
+
+.AltButtonParent {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    border: solid 2px var(--tertiary);
+}
+
+.AltButtonParent:hover {
+    background-color: var(--secondary10);
+}
+
+.AltButton:link, .AltButton:visited {
+    color: var(--tertiary);
+}
+
+.AltButton:hover {
+    color: var(--tertiary);
+}
+
+.AltButton:active {
+    color: var(--tertiary);
+}
+
+.Title {
+    color: var(--tertiary);
+}
+
+.DivSecondary {
+    background-color: var(--quinary);
+    color: var(--tertiary);
+    border: solid 2px var(--tertiary);
+}
+
+.DivSecondary:hover {
+    background-color: var(--quinary10);
+}
+
+.DivSecondary>img {
+    border: solid 2px var(--tertiary);
+}
+
+.DivSecondary>h3 {
+    background-color: var(--secondary);
+    border: solid 2px var(--tertiary);
+}
+
+#NameEntry {
+    background-color: var(--secondary);
+    border: solid 2px var(--tertiary);
+    color: var(--tertiary);
+}
+
+#nameInput {
+    border: solid 1px var(--senary);
+    background-color: var(--tertiary);
+    color: var(--senary);
+}
+
+#RestartGui {
+    border: solid 2px var(--tertiary);
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+#RestartGui>h2 {
+    text-shadow: 2px 2px var(--senary);
+}
+
+.BasicButton {
+    border: solid 2px var(--tertiary);
+    background-color: var(--quinary);
+}
+
+.BasicButton:hover {
+    background-color: var(--quinary10);
+}
+
+.BasicButton:active {
+    background-color: var(--quinary);
+}
+
+#Leaderboard {
+    border: solid 2px var(--tertiary);
+    background-color: var(--secondary);
+}
+
+#Leaderboard:hover {
+    background-color: var(--secondary10);
+}
+
+#LeaderboardTitle {
+    color: var(--tertiary);
+}
+
+#Leaderboard h3 {
+    color: var(--tertiary);
+}
+
+#Empty {
+    color: var(--septenary);
+}
+
+footer {
+    background-color: var(--secondary);
+    border-top: solid 2px var(--tertiary);
+    color: var(--tertiary);
+}
+
+.ListContainer {
+    color: var(--tertiary);
+    border: solid 2px var(--tertiary);
+    background-color: var(--secondary);
+}
+
+.ListContainer h2 {
+    border-bottom: solid 2px var(--tertiary);
+}
+
+#TextContainer {
+    border: solid 2px var(--tertiary);
+    background-color: var(--secondary10);
+}
+
+#UserInput {
+    background-color: var(--secondary);
+}

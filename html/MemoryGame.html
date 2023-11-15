@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human Improvement - Memory Matcher</title>
-    <script src="../js/main.js"></script>
     <script src="../js/MemoryGame.js"></script>
     <link rel="stylesheet" href="../css/main.css"/>
     <link rel="stylesheet" href="../css/MemoryGame.css"/>
+    <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    <link rel="stylesheet" id="cssTheme" href="">
+    <script src="../js/main.js"></script>
 </head>
 <body>
     <div class="Wrapper">
@@ -15,24 +17,61 @@
             <h1 class="Title">Memory Matcher</h1>
             <a class="H3" href="../index.html">Return Home</a>
         </div>
-        <div class="numbers">
-            <p id="timer" hidden>0</p>
-            <p id="score" hidden>0</p>
+        <div id="Leaderboard" class="LBoard1">
+            <h2 id="LeaderboardTitle">Leaderboard</h2>
+            <div class="Scores" id="Scores">
+                
+            </div>
         </div>
-        <div class="GridContainer" id="CardContainer"></div>
-        <div id="StartGui">
-            <h2>How To Play</h2>
-            <p>Your goal is to match cards by number and suit in as few clicks as possible. All of the cards will be covered. When a card is clicked, it is revealed. When a second card is picked, it is also revealed. If they are a match, the cards disapear. If they don't match, the cards are flipped back around. You can select the number of cards to use below.</p>
-            <h2>Enter Number of Cards</h2>
-            <input id="cardNumber" class="cardNumber" type="number" min="2" max="104" value="12"/>
-            <div class="BasicButton" id="StartGame">Start Game</div>
+        <div class="GridContainer">
+            <div class="numbers" id="NumContainer" hidden>
+                <div>
+                    <p class="text">Time: </p>
+                    <p id="timer">0</p>
+                </div>
+                <div>
+                    <p class="text">Clicks: </p>
+                    <p id="score">0</p>
+                </div>
+            </div>
+            <div class="InputContainer" id="InputContainer">
+                <div id="StartGui">
+                    <h2>How To Play</h2>
+                    <p>Choose your desired number of cards to match (The more cards, the more difficult!). Click on a card to flip it over. Match the pairs of cards by flipping over two identical cards (7 of hearts matches with 7 of hearts, Queen of diamonds with queen of diamonds, etc.). You must rely on memory and concentration to match the pairs in the least amount of time. Good luck!
+                    </p>
+                    <h2>Enter Number of Cards</h2>
+                    <input id="cardNumber" class="cardNumber" type="number" min="2" max="104" value="12"/>
+                    <div class="BasicButton" id="StartGame">Start Game</div>
+                </div>
+
+                <input type="text" id="UserInput" name="userInput" placeholder="Type Here" class="UserInput" autocomplete="off" hidden>
+                <div id="RestartGui">
+                    <h3 id="seconds"></h3>
+                    <h3 id="clicks"></h3>
+                    <h3 id="cardCount"></h3>
+                    <div class="BasicButtonContainer">
+                        <div class="BasicButton" id="RestartGame">Play Again</div>
+                        <div class="BasicButton" id="EnterName">Add Score</div>
+                    </div>
+                </div>
+                <div id="NameEntry" hidden>
+                    <h2>Enter Your Name To Add Your Score</h2>
+                    <div class="flex">
+                        <input id="nameInput" type="text" placeholder="Ex: John Denver" autocomplete="off"> 
+                        <div id="AddToBoard" class="BasicButton" >Add Name</div>
+                    </div>
+                    <div class="BasicButton FullWidth" id="ReturnButton">Return</div>
+                </div>
+            </div>
+            <div id="CardContainer"></div>
+
+            <audio id="CardFlip" hidden>
+                <source src="../sounds/CardFlip.mp3" type="audio/mp3">
+            </audio>
+            <audio id="WinGame" hidden>
+                <source src="../sounds/WinGame.mp3" type="audio/mp3">
+            </audio>
         </div>
-        <audio id="CardFlip" hidden>
-            <source src="../sounds/CardFlip.mp3" type="audio/mp3">
-        </audio>
-        <audio id="WinGame" hidden>
-            <source src="../sounds/WinGame.mp3" type="audio/mp3">
-        </audio>
         <div class="push"></div>
     </div>
             

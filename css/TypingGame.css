@@ -1,7 +1,7 @@
-.GridContainer {
+/* .GridContainer {
     display: flex;
     flex-direction: column;
-}
+} */
 
 /* #timer {
     margin: auto;
@@ -9,14 +9,13 @@
     font-size: 30px;
 } */
 
-#StartGui {
+/* #StartGui {
     background-color: rgb(231, 122, 20);
     border: solid 2px white;
     padding: 10px;
     color: white;
     text-align: center;
     width: 500px;
-    margin-top: 80px;
 }
 
 #StartGui>h2 {
@@ -28,12 +27,13 @@
     margin-bottom: 24px;
 }
 
-#StartGui>input {
+#StartGui input {
     font-size: 20px;
     text-align: center;
-}
+    margin: 0 2px;
+} */
 
-.BasicButton {
+/* .BasicButton {
     margin: 20px auto 0;
     width: 100px;
     cursor:pointer;
@@ -41,12 +41,12 @@
     border: solid 2px white;
     border-radius: 8px;
     background-color: rgb(53, 53, 53);
-}
+} */
 
 #TextContainer {
-    border: solid 2px white;
+    /* border: solid 2px white; */
     border-top-right-radius: 20px;
-    background-color: rgb(68, 68, 68);
+    /* background-color: rgb(68, 68, 68); */
     display: none;
     flex-wrap: wrap;
     justify-content: center;
@@ -69,7 +69,6 @@
     }
 }
 
-
 @media screen and (max-width: 450px) {
     #TextContainer>.word {
         font-size: 18px;
@@ -77,15 +76,15 @@
 }
 
 .word {
-    color: white;
+    /* color: white; */
 }
 
-.InputContainer {
+/* .InputContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .UserInput {
     background-color: rgb(53, 53, 53);
@@ -113,8 +112,8 @@
     outline: rgb(53, 53, 53) solid 2px;
 }
 
-#RestartGui {
-    width: 1000px;
+/* #RestartGui {
+    width: 500px;
     max-width: 95%;
     padding: 20px 10px;
     margin: 10px auto 0px;
@@ -127,7 +126,7 @@
 #RestartGui>h2 {
     text-shadow: 2px 2px black;
     font-size: 30px;
-}
+} */
 
 .greenC {
     color: rgb(55, 180, 55);

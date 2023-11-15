@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human Improvement - Typing Therapy</title>
-    <script src="../js/main.js"></script>
     <script src="../js/TypingGame.js" type="module"></script>
     <link rel="stylesheet" href="../css/main.css"/>
     <link rel="stylesheet" href="../css/TypingGame.css"/>
+    <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    <link rel="stylesheet" id="cssTheme" href="">
+    <script src="../js/main.js"></script>
 </head>
 <body>
     <div class="Wrapper">
@@ -15,49 +17,50 @@
             <h1 class="Title">Typing Therapy</h1>
             <a class="H3" href="../index.html">Return Home</a>
         </div>
+        <div id="Leaderboard" class="LBoard1">
+            <h2 id="LeaderboardTitle">Leaderboard</h2>
+            <div class="Scores" id="Scores"></div>
+        </div>
         <div class="GridContainer">
             <!-- <p id="timer" hidden>0</p> -->
-            <div class="numbers">
+            <div class="numbers" id="NumContainer" hidden>
                 <div>
-                    <p class="text" hidden>Time: </p>
-                    <p id="timer" hidden>0</p>
+                    <p class="text">Time: </p>
+                    <p id="timer">0</p>
                 </div>
                 <div>
-                    <p class="text" hidden>WPM: </p>
-                    <p id="score" hidden>0</p>
+                    <p class="text">WPM: </p>
+                    <p id="score">0</p>
                 </div>
             </div>
             <div id="TextContainer"></div>
             <div class="InputContainer" id="InputContainer">
                 <div id="StartGui">
                     <h2>How To Play</h2>
-                    <p>In this activity, your goal is to type out all of the words on the screen as fast as possible. You can select the number of words that you want to use below.</p>
+                    <p>In this activity, your goal is to type out all of the words on the screen as fast as possible. You can select the number of words that you want to use below. Your score is tracked in WPM (Words per minute).</p>
                     <h2>Enter Number of Words</h2>
-                    <input id="wordNumber" class="wordNumber" type="number" min="1" max="100" value="10"/>
+                    <input id="wordNumber" class="wordNumber" type="number" min="1" max="200" value="10"/>
                     <div class="BasicButton" id="StartGame">Start Game</div>
                 </div>
                 <input type="text" id="UserInput" name="userInput" placeholder="Type Here" class="UserInput" autocomplete="off" hidden>
-                <div id="RestartGui" hidden>
-                    <h3 id="words"></h3>
+                <div id="RestartGui">
                     <h3 id="seconds"></h3>
+                    <h3 id="words"></h3>
                     <h3 id="wpm"></h3>
-                    <div class="BasicButton" id="RestartGame">Play Again</div>
+                    <div class="BasicButtonContainer">
+                        <div class="BasicButton" id="RestartGame">Play Again</div>
+                        <div class="BasicButton" id="EnterName">Add Score</div>
+                    </div>
                 </div>
-                <div id="Leaderboard">
-                    <h2>Leaderboard</h2>
-                    <div id="NameEntry" hidden>
-                        <h2>Enter Your Name To Add Your Score</h2>
-                        <div class="flex">
-                            <input id="nameInput" type="text" placeholder="Ex: John Denver" autocomplete="off"> 
-                            <div id="AddToBoard" class="BasicButton" >Add Name</div>
-                        </div>
+                <div id="NameEntry" hidden>
+                    <h2>Enter Your Name To Add Your Score</h2>
+                    <div class="flex">
+                        <input id="nameInput" type="text" placeholder="Ex: John Denver" autocomplete="off"> 
+                        <div id="AddToBoard" class="BasicButton" >Add Name</div>
                     </div>
-                    <div class="Scores" id="Scores">
-                        
-                    </div>
+                    <div class="BasicButton FullWidth" id="ReturnButton">Return</div>
                 </div>
             </div>
-
             <audio id="audio1" hidden>
                 <source src="../sounds/CorrectWord.mp3" type="audio/mp3">
             </audio>

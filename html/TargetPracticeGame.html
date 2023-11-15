@@ -3,22 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Improvement - Game</title>
-    <script src="../js/main.js"></script>
+    <title>Human Improvement - Big Iron</title>
+    <script src="../js/AimGame.js"></script>
     <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/TargetPracticeGame.css"/>
+    <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+    <link rel="stylesheet" id="cssTheme" href="">
+    <script src="../js/main.js"></script>
 </head>
 <body>
-    <div class="DivTitle">
-        <h1 class="Title">Target Practice Game</h1>
-        <a class="H3" href="../index.html">Return Home</a>
+    <div class="Wrapper">
+        <div class="DivTitle">
+            <h1 class="Title">Big Iron</h1>
+            <a class="H3" href="../index.html">Return Home</a>
+        </div>
+        <div id="Leaderboard" class="LBoard1">
+            <h2 id="LeaderboardTitle">Leaderboard</h2>
+            <div class="Scores" id="Scores"></div>
+        </div>
+        <div class="GridContainer">
+            <div class="numbers" id="NumContainer" hidden>
+                <div>
+                    <p class="text">Timer: </p>
+                    <p id="timer">0</p>
+                </div>
+                <div>
+                    <p class="text">Hits: </p>
+                    <p id="score">0</p>
+                </div>
+                <div>
+                    <p class="text">Accuracy: </p>
+                    <p id="accuracy">100%</p>
+                </div>
+            </div>
+            <div id="Container">
+                <div id="Target">
+                    <img id="TargetImg" src="../images/Target.png" draggable="false">
+                </div>
+                <!-- <img src="../images/DesertBackground2.jpg" id="bgTest"> -->
+                <!-- <div>
+                    <img src="/images/revolver2.png" width="200px">
+                </div> -->
+            </div>
+            <div class="InputContainer" id="InputContainer">
+                <div id="StartGui">
+                    <h2>How To Play</h2>
+                    <p>Your goal is to click the target as many times as possible within the amount of time set below. This game trains your hand eye coordination. Your score is tracked in TPM (Targets per minute).</p>
+                    <h2>Enter Number of Seconds</h2>
+                    <input id="seconds" class="seconds" type="number" min="5" max="60" value="20"/>
+                    <div class="BasicButton" id="StartGame">Start Game</div>
+                </div>
+                <div id="RestartGui">
+                    <h3 id="Seconds"></h3>
+                    <h3 id="TargetsHit"></h3>
+                    <h3 id="TargetsMissed"></h3>
+                    <h3 id="Accuracy"></h3>
+                    <div class="BasicButtonContainer">
+                        <div class="BasicButton" id="RestartGame">Play Again</div>
+                        <div class="BasicButton" id="EnterName">Add Score</div>
+                    </div>
+                </div>
+                <div id="NameEntry" hidden>
+                    <h2>Enter Your Name To Add Your Score</h2>
+                    <div class="flex">
+                        <input id="nameInput" type="text" placeholder="Ex: John Denver" autocomplete="off"> 
+                        <div id="AddToBoard" class="BasicButton" >Add Name</div>
+                    </div>
+                    <div class="BasicButton FullWidth" id="ReturnButton">Return</div>
+                </div>
+    
+                <audio id="WinGame" hidden>
+                    <source src="../sounds/WinGame.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <div class="push"></div>
     </div>
+    
     <footer>
-        <h2>
-            Created by: Leejen Denetsosie-Gomez, Dongki Kang, Marcus Smith, and Joshua Walker
-        </h2>
         <h2>
             &copy; 2023 Da Boys Ltd. | All Rights Reserved
         </h2>
     </footer>
 </body>
+
 </html>

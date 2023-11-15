@@ -1,12 +1,12 @@
 .ListContainer {
     text-align: center;
-    width: fit-content;
+    width: 750px;
     margin: 40px auto;
-    color: white;
-    border: solid 2px white;
+    /* color: white;
+    border: solid 2px white; */
     border-radius: 10px;
-    background-color: rgb(241, 132, 30);
-    padding: 20px;
+    /* background-color: rgb(241, 132, 30); */
+    padding: 0 0 20px 0;
 }
 
 .ListContainer h2 {
