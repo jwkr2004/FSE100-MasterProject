@@ -38,7 +38,7 @@ body, html {
     font-family: 'Roboto', sans-serif;
     /* color: white; */
     width: 750px;
-    max-width: 99%;
+    max-width: 95%;
     margin: 10px auto 25px;
     padding-bottom: 10px;
     text-shadow: 2px 2px black;
@@ -98,7 +98,7 @@ body, html {
 #StartGui {
     /* background-color: rgb(231, 122, 20); */
     /* border: solid 2px white; */
-    padding: 10px;
+    padding: 10px 5px;
     /* color: white; */
     text-align: center;
     width: 500px;
@@ -295,8 +295,11 @@ footer>h2 {
     padding: 10px;
 }
 
-.numbers>div {
+.numbers p {
     font-size: 30px;
+}
+
+.numbers>div {
     display: flex;
     justify-content: space-between;
 }
@@ -304,14 +307,14 @@ footer>h2 {
 #timer {
     text-align: center;
     /* color: white; */
-    font-size: 30px;
+    /* font-size: 30px; */
     font-weight: 200;
 }
 
 #score {
     text-align: center;
     /* color: white; */
-    font-size: 30px;
+    /* font-size: 30px; */
     font-weight: 200;
 }
 
@@ -453,7 +456,7 @@ footer>h2 {
     margin: 20px auto 0;
     width: 200px;
     min-width: fit-content;
-    max-width: 99%;
+    max-width: 95%;
     font-weight: 300;
     margin: 10px auto 50px;
     padding: 10px 0;
@@ -522,6 +525,9 @@ input[type=number]::-webkit-outer-spin-button {
     .AltButton {
         font-size: 24px;
     }
+    .numbers p {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 200px) {
@@ -549,5 +555,8 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .BasicButton {
         font-size: 16px;
+    }
+    .numbers p {
+        font-size: 18px;
     }
 }

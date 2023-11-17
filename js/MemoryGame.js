@@ -199,7 +199,6 @@ function clickCard(event) {
             setCards();
             checkMatch();
         }
-        console.log(cardData[cardNum]);
     }
 }
 
@@ -209,7 +208,6 @@ function createCardType() {
         var cardSuitNumber = Math.floor(Math.random() * 4);
         var cardNumber = Math.floor(Math.random() * 13 + 1);
         var name = suitArr[cardSuitNumber] + "_" + cardNumber;
-        console.log(name);
         if(cardsPicked.filter(element => element === name).length === 0) {
             cardsPicked.push(name);
             return name;
@@ -230,6 +228,7 @@ function checkWin() {
         document.getElementById("seconds").innerText = `Total time: ${Math.round(seconds * 100) / 100} seconds.`;
         document.getElementById("clicks").innerText = `Total clicks: ${clickCount} clicks.`;
         document.getElementById("cardCount").innerText = `Total cards: ${numberOfCards} cards.`;
+        document.getElementById("RestartGui").scrollIntoView();
         // let buttonContainer = document.createElement("div");
         // let button = document.createElement("button");
         // let h2 = document.createElement("h2");
@@ -260,7 +259,6 @@ function checkMatch() {
             setTimeout(() => {
                 var card1 = cardData[buffer[0]];
                 var card2 = cardData[buffer[1]];
-                console.log(buffer);
                 if(card1.cardName === card2.cardName) {
                     card1.exists = false;
                     card2.exists = false;
@@ -268,12 +266,10 @@ function checkMatch() {
                 card1.revealed = false;
                 card2.revealed = false;
                 
-                console.log(buffer);
                 noClick = false;
                 setCards();
                 // checkMatch();
             }, 800);
-            console.log(buffer)
         }
     }
 }

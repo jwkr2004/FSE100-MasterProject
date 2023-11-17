@@ -95,7 +95,6 @@
 }
 
 .numbers>div {
-    font-size: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -103,21 +102,18 @@
 #timer {
     text-align: center;
     /* color: white; */
-    font-size: 30px;
     font-weight: 200;
 }
 
 #score {
     text-align: center;
     /* color: white; */
-    font-size: 30px;
     font-weight: 200;
 }
 
 #accuracy {
     text-align: center;
     /* color: white; */
-    font-size: 30px;
     font-weight: 200;
 }
 

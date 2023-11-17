@@ -38,6 +38,10 @@ var shapeHeight;
 
 var obj = {};
 
+window.addEventListener("resize", () => {
+    setPosition(true);
+});
+
 window.addEventListener("load", () => {
     obj = JSON.parse(localStorage.getItem("Settings"));
 
@@ -104,6 +108,7 @@ function startGame() {
         initialTime = seconds;
         document.getElementById("timer").innerText = seconds;
         document.getElementById("Container").style.display = "block";
+        document.getElementById("Container").style.height = document.getElementById("Container").clientWidth * (9/16) + "px";
         document.getElementById("NumContainer").style.display = "block";
         document.getElementById("StartGui").style.display = "none";
         document.getElementById("Leaderboard").style.display = "none";
@@ -112,17 +117,24 @@ function startGame() {
 }
 
 
-function setPosition() {
+function setPosition(resize) {
+    document.getElementById("Container").style.height = document.getElementById("Container").clientWidth * (9/16) + "px";
     containerWidth = document.getElementById("Container").clientWidth;
     containerHeight = document.getElementById("Container").clientHeight;
     shapeWidth = containerWidth / 10;
     shapeHeight = containerWidth / 10;
-    document.getElementById("Target").style.width = shapeWidth + "px";
-    document.getElementById("Target").style.height = shapeHeight + "px";
     var x = Math.floor(Math.random() * (containerWidth - shapeWidth));
     var y = Math.floor(Math.random() * (containerHeight - shapeHeight));
-    document.getElementById("Target").style.left= x + "px";
-    document.getElementById("Target").style.top= y + "px";
+    document.getElementById("Target").style.width = shapeWidth + "px";
+    document.getElementById("Target").style.height = shapeHeight + "px";
+    if(resize == true) {
+        document.getElementById("Target").style.left= (containerWidth / 2 - shapeWidth / 2) + "px";
+        document.getElementById("Target").style.top= (containerHeight / 2 - shapeHeight / 2) + "px";
+    }
+    else {
+        document.getElementById("Target").style.left= x + "px";
+        document.getElementById("Target").style.top= y + "px";
+    }
 }
 
 function clickTarget() {
