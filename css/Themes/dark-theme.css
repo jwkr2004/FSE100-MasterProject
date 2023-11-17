@@ -1,13 +1,25 @@
 * {
     --primary: rgb(49, 49, 49);
-    --secondary: rgb(219, 219, 219);
-    --secondary10: rgb(229, 229, 229);
-    --tertiary: rgb(43, 43, 43);
-    --tertiary30: rgb(73, 73, 73);
+    /* --secondary: rgb(219, 219, 219);
+    --secondary10: rgb(229, 229, 229); */
+    /* --secondary: rgb(54, 165, 54);
+    --secondary10: rgb(64, 175, 64); */
+
+    --secondary: rgb(0, 0, 128);
+    --secondary10: rgb(10, 10, 138);
+
+    --tertiary: rgb(235, 235, 235);
+    --tertiary30: rgb(245, 245, 245);
     --quaternary: rgb(240, 240, 240);
     --quaternary-30: rgb(210, 210, 210);
-    --quinary: rgb(219, 219, 219);
-    --quinary10: rgb(229, 229, 229);
+    /* --quinary: rgb(75, 165, 75);
+    --quinary10: rgb(85, 175, 85); */
+    /* --quinary: rgb(219, 219, 219);
+    --quinary10: rgb(229, 229, 229); */
+
+    --quinary: rgb(0, 0, 128);
+    --quinary10: rgb(10, 10, 138);
+
     --senary: white;
     --septenary: rgb(151, 151, 151);
 }
@@ -17,20 +29,20 @@ body, html {
 }
 
 .DivTitle {
-    text-shadow: 2px 2px var(--septenary);
+    text-shadow: 2px 2px var(--primary);
     color: var(--tertiary);
     border: 2px solid var(--tertiary);
     border-bottom: solid 8px var(--tertiary);
     background-color: var(--secondary);
 }
 
-.DivTitle>.H3 {
+/* .DivTitle .H3 {
     color: var(--tertiary);
 }
 
-.DivTitle>.H3:hover {
+.DivTitle .H3:hover {
     color: var(--tertiary30);
-}
+} */
 
 .DivPrimary {
     background-color: var(--secondary);
@@ -118,6 +130,17 @@ body, html {
     text-shadow: 2px 2px var(--senary);
 }
 
+.H3 {
+    color: var(--quaternary);
+    border: solid 2px var(--tertiary);
+    background-color: var(--quinary);
+}
+
+.H3:hover {
+    border: solid 2px var(--tertiary);
+    background-color: var(--quinary10);
+}
+
 .BasicButton {
     border: solid 2px var(--tertiary);
     background-color: var(--quinary);
@@ -165,7 +188,40 @@ footer {
 }
 
 .ListContainer h2 {
-    border-bottom: solid 2px var(--tertiary);
+
+}
+
+.ListContainer h3 {
+    text-decoration: underline solid 1px var(--tertiary);
+}
+
+.ListContainer h4 {
+
+}
+
+.SettingsTheme {
+    border-top: 1px var(--tertiary) solid;
+}
+
+.SettingsTheme:last-of-type {
+    border-top: 1px var(--tertiary) solid;
+    border-bottom: 1px var(--tertiary) solid;
+}
+
+.SettingsTheme:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsCard:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsBG:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsCategory {
+    border-top: dashed 2px var(--tertiary);
 }
 
 #TextContainer {
@@ -191,4 +247,26 @@ footer {
     /* background-color: rgb(235, 235, 91); */
     /* text-decoration: underline 4px orange; */
     border-bottom: var(--primary) solid 4px;
+}
+
+.numbers {
+    color: var(--tertiary);
+}
+
+#Container {
+    border: solid 2px var(--tertiary);
+}
+
+.C1 {
+    border-top: solid 2px var(--tertiary);
+    border-right: solid 1px var(--tertiary);
+    border-bottom: solid 2px var(--tertiary);
+    border-left: solid 2px var(--tertiary);
+}
+
+.C2 {
+    border-top: solid 2px var(--tertiary);
+    border-right: solid 2px var(--tertiary);
+    border-bottom: solid 2px var(--tertiary);
+    border-left: solid 1px var(--tertiary);
 }

@@ -36,7 +36,27 @@ var containerHeight;
 var shapeWidth;
 var shapeHeight;
 
+var obj = {};
+
 window.addEventListener("load", () => {
+    obj = JSON.parse(localStorage.getItem("Settings"));
+
+    let bgImg = document.getElementById("Container");
+    switch(obj.bg) {
+        case "1":
+            bgImg.style.background = 'top/100% url("../images/DesertBackground1.jpg")';
+        break;
+        case "2":
+            bgImg.style.background = 'top/100% url("../images/DesertBackground2.png")';
+        break;
+        case "3":
+            bgImg.style.background = 'top/100% url("../images/DesertBackground3.png")';
+        break;
+        default:
+            bgImg.style.background = 'top/100% url("../images/DesertBackground1.jpg")';
+        break;
+    }
+    
     document.getElementById("RestartGui").style.display = "none";
     document.getElementById("Container").addEventListener("mousedown", () => {
         if(timerStarted === true) {

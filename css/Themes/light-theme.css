@@ -1,14 +1,28 @@
 * {
-    --primary: white;
-    --secondary: rgb(138, 138, 138);
-    --secondary10: rgb(148, 148, 148);
+    --primary: rgb(221, 221, 221);
+    --primary10: rgb(231, 231, 231);
+    /* --secondary: rgb(138, 138, 138);
+    --secondary10: rgb(148, 148, 148); */
+    /* --secondary: rgb(75, 165, 75);
+    --secondary10: rgb(85, 175, 85); */
+
+    --secondary: rgb(60, 188, 245);
+    --secondary10: rgb(10, 198, 255);
+
+
     --tertiary: black;
-    --quaternary: rgb(240, 240, 240);
-    --quaternary-30: rgb(210, 210, 210);
-    --quinary: rgb(138, 138, 138);
-    --quinary10: rgb(148, 148, 148);
+    --quaternary: rgb(0, 0, 0);
+    --quaternary60: rgb(60, 60, 60);
+    /* --quinary: rgb(138, 138, 138);
+    --quinary10: rgb(148, 148, 148); */
+    /* --quinary: rgb(75, 165, 75);
+    --quinary10: rgb(85, 175, 85); */
+
+    --quinary: rgb(60, 188, 245);
+    --quinary10: rgb(10, 198, 255);
+    
     --senary: rgb(0, 0, 0);
-    --septenary: rgb(151, 151, 151);
+    --septenary: rgb(110, 110, 110);
 }
 
 body, html {
@@ -23,13 +37,13 @@ body, html {
     background-color: var(--secondary);
 }
 
-.DivTitle>.H3 {
+/* .DivTitle .H3 {
     color: var(--quaternary);
 }
 
-.DivTitle>.H3:hover {
-    color: var(--quaternary-30);
-}
+.DivTitle .H3:hover {
+    color: var(--quaternary60);
+} */
 
 .DivPrimary {
     background-color: var(--secondary);
@@ -103,7 +117,7 @@ body, html {
 
 #nameInput {
     border: solid 1px var(--senary);
-    background-color: var(--tertiary);
+    background-color: var(--primary);
     color: var(--senary);
 }
 
@@ -117,13 +131,24 @@ body, html {
     text-shadow: 2px 2px var(--senary);
 }
 
-.BasicButton {
+.H3 {
+    color: var(--quaternary);
     border: solid 2px var(--tertiary);
     background-color: var(--quinary);
 }
 
-.BasicButton:hover {
+.H3:hover {
+    border: solid 2px var(--tertiary);
     background-color: var(--quinary10);
+}
+
+.BasicButton {
+    border: solid 2px var(--tertiary);
+    background-color: var(--primary);
+}
+
+.BasicButton:hover {
+    background-color: var(--primary10);
 }
 
 .BasicButton:active {
@@ -164,7 +189,40 @@ footer {
 }
 
 .ListContainer h2 {
-    border-bottom: solid 2px var(--tertiary);
+
+}
+
+.ListContainer h3 {
+    text-decoration: underline solid 1px var(--tertiary);
+}
+
+.ListContainer h4 {
+
+}
+
+.SettingsTheme {
+    border-top: 1px var(--tertiary) solid;
+}
+
+.SettingsTheme:last-of-type {
+    border-top: 1px var(--tertiary) solid;
+    border-bottom: 1px var(--tertiary) solid;
+}
+
+.SettingsTheme:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsCard:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsBG:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsCategory {
+    border-top: dashed 2px var(--tertiary);
 }
 
 #TextContainer {
@@ -190,4 +248,26 @@ footer {
     /* background-color: rgb(235, 235, 91); */
     /* text-decoration: underline 4px orange; */
     border-bottom: var(--primary) solid 4px;
+}
+
+.numbers {
+    color: var(--tertiary);
+}
+
+#Container {
+    border: solid 2px var(--tertiary);
+}
+
+.C1 {
+    border-top: solid 2px var(--tertiary);
+    border-right: solid 1px var(--tertiary);
+    border-bottom: solid 2px var(--tertiary);
+    border-left: solid 2px var(--tertiary);
+}
+
+.C2 {
+    border-top: solid 2px var(--tertiary);
+    border-right: solid 2px var(--tertiary);
+    border-bottom: solid 2px var(--tertiary);
+    border-left: solid 1px var(--tertiary);
 }

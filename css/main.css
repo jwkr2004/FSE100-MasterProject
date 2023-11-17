@@ -18,6 +18,16 @@ body, html {
     flex-direction: column;
 }
 
+.flexDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    width: fit-content;
+    border: solid 1px white;
+    border-radius: 10px;
+}
 
 .DivTitle {
     display: flex;
@@ -39,17 +49,27 @@ body, html {
     /* background-color: rgb(241, 132, 30); */
 }
 
-.DivTitle>.H3 {
-    font-size: 1.8rem;
+.H3 {
+    font-size: 28px;
     text-decoration: none;
     /* color: rgb(241, 241, 241); */
     text-shadow: none;
     width: fit-content;
+    /* margin: auto; */
+    padding: 4px 18px;
+    border: solid 1px white;
+    border-radius: 10px;
     margin: auto;
 }
 
-.DivTitle>.H3:hover {
+.H3:hover {
     /* color: rgb(206, 206, 206); */
+}
+
+.Line {
+    font-size: 28px;
+    margin: 0 10px;
+    text-shadow: none;
 }
 
 .DivPrimary {
@@ -156,6 +176,16 @@ body, html {
     /* color: white; */
 }
 
+#LeaderboardTitle {
+    /* color: white; */
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 5px;
+    user-select:none;
+    /* border-bottom: solid 0px white; */
+    /* transition: all 0.1s; */
+}
+
 .Title {
     font-size: 48px;
     /* color: white; */
@@ -169,46 +199,6 @@ body, html {
 footer {
     font-size: 14px;
 }
-
-@media screen and (max-width: 390px) {
-    footer {
-        font-size: 11px;
-    }
-}
-
-@media screen and (max-width: 310px) {
-    .Title {
-        font-size: 40px;
-    }
-    footer {
-        font-size: 8px;
-    }
-}
-
-@media screen and (max-width: 240px) {
-    .Title {
-        font-size: 32px;
-    }
-    .GameTitle {
-        font-size: 24px;
-    }
-    .AltButton {
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 200px) {
-    .Title {
-        font-size: 24px;
-    }
-    .GameTitle {
-        font-size: 18px;
-    }
-    .AltButton {
-        font-size: 18px;
-    }
-}
-
 
 .H2 {
     font-size: 1.8rem
@@ -313,14 +303,14 @@ footer>h2 {
 
 #timer {
     text-align: center;
-    color: white;
+    /* color: white; */
     font-size: 30px;
     font-weight: 200;
 }
 
 #score {
     text-align: center;
-    color: white;
+    /* color: white; */
     font-size: 30px;
     font-weight: 200;
 }
@@ -338,7 +328,7 @@ footer>h2 {
 
 .text {
     /* margin: 0 10px; */
-    color: white;
+    /* color: white; */
     font-weight: 500;
 }
 
@@ -478,15 +468,6 @@ footer>h2 {
     cursor: pointer;
 }
 
-#LeaderboardTitle {
-    /* color: white; */
-    text-align: center;
-    padding-bottom: 5px;
-    user-select:none;
-    /* border-bottom: solid 0px white; */
-    /* transition: all 0.1s; */
-}
-
 #Leaderboard h3 {
     margin: 8px;
     /* color: white; */
@@ -507,4 +488,66 @@ input[type="number"] {
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
+}
+
+
+@media screen and (max-width: 390px) {
+    footer {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .Title {
+        font-size: 38px;
+    }
+    .H3, .Line {
+        font-size: 22px;
+    }
+    footer {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .Title {
+        font-size: 32px;
+    }
+    .H3, .Line {
+        font-size: 18px;
+    }
+    .GameTitle {
+        font-size: 24px;
+    }
+    .AltButton {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .Title {
+        font-size: 24px;
+    }
+    .H3, .Line {
+        font-size: 16px;
+    }
+    .GameTitle {
+        font-size: 18px;
+    }
+    .AltButton {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 185px) {
+    .flexDiv {
+        font-size: 16px;
+        flex-direction: column;
+    }
+    #LeaderboardTitle {
+        font-size: 20px;
+    }
+    .BasicButton {
+        font-size: 16px;
+    }
 }

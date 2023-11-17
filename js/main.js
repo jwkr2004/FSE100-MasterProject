@@ -6,9 +6,18 @@ if(localStorage.getItem("Settings") !== null && localStorage.getItem("Settings")
     obj = JSON.parse(localStorage.getItem("Settings"));
 }
 
-else {
+if(obj.theme === undefined || obj.theme === "" || obj.theme === null) {
     obj.theme = "red";
 }
+
+if(obj.card === undefined || obj.card === "" || obj.card === null) {
+    obj.card = "1";
+}
+
+if(obj.bg === undefined || obj.bg === "" || obj.bg === null) {
+    obj.bg = "1";
+}
+
 
 localStorage.setItem("Settings", JSON.stringify(obj));
 
@@ -16,18 +25,43 @@ var theme = obj.theme;
 
 switch(theme) {
     case "orange":
-        document.getElementById("cssTheme").href = "../css/Themes/orange-blue-theme.css";
+        if(window.location.href.includes("index.html")) {
+            document.getElementById("cssTheme").href = "./css/Themes/orange-blue-theme.css";
+        }
+        else {
+            document.getElementById("cssTheme").href = "../css/Themes/orange-blue-theme.css";
+        }
     break;
     case "red":
-        document.getElementById("cssTheme").href = "../css/Themes/red-black-theme.css";
+        if(window.location.href.includes("index.html")) {
+            document.getElementById("cssTheme").href = "./css/Themes/red-black-theme.css";
+        }
+        else {
+            document.getElementById("cssTheme").href = "../css/Themes/red-black-theme.css";
+        }
     break;
     case "light":
-        document.getElementById("cssTheme").href = "../css/Themes/light-theme.css";
+        if(window.location.href.includes("index.html")) {
+            document.getElementById("cssTheme").href = "./css/Themes/light-theme.css";
+        }
+        else {
+            document.getElementById("cssTheme").href = "../css/Themes/light-theme.css";
+        }
     break;
     case "dark":
-        document.getElementById("cssTheme").href = "../css/Themes/dark-theme.css";
+        if(window.location.href.includes("index.html")) {
+            document.getElementById("cssTheme").href = "./css/Themes/dark-theme.css";
+        }
+        else {
+            document.getElementById("cssTheme").href = "../css/Themes/dark-theme.css";
+        }
     break;
     default:
-        document.getElementById("cssTheme").href = "../css/Themes/orange-blue-theme.css";
+        if(window.location.href.includes("index.html")) {
+            document.getElementById("cssTheme").href = "./css/Themes/orange-blue-theme.css";
+        }
+        else {
+            document.getElementById("cssTheme").href = "../css/Themes/orange-blue-theme.css";
+        }
     break;
 }

@@ -22,13 +22,13 @@ body, html {
     background-color: var(--secondary);
 }
 
-.DivTitle>.H3 {
+/* .DivTitle .H3 {
     color: var(--quaternary);
 }
 
-.DivTitle>.H3:hover {
+.DivTitle .H3:hover {
     color: var(--quaternary-30);
-}
+} */
 
 .DivPrimary {
     background-color: var(--secondary);
@@ -64,6 +64,10 @@ body, html {
 }
 
 .AltButton:active {
+    color: var(--tertiary);
+}
+
+.word {
     color: var(--tertiary);
 }
 
@@ -110,6 +114,28 @@ body, html {
 
 #RestartGui>h2 {
     text-shadow: 2px 2px var(--senary);
+}
+
+.H3 {
+    color: var(--quaternary);
+    border: solid 2px var(--tertiary);
+    background-color: var(--quinary);
+}
+
+.H3:hover {
+    border: solid 2px var(--tertiary);
+    background-color: var(--quinary10);
+}
+
+.H3 {
+    color: var(--quaternary);
+    border: solid 2px var(--tertiary);
+    background-color: var(--quinary);
+}
+
+.H3:hover {
+    border: solid 2px var(--tertiary);
+    background-color: var(--quinary10);
 }
 
 .BasicButton {
@@ -159,7 +185,40 @@ footer {
 }
 
 .ListContainer h2 {
-    border-bottom: solid 2px var(--tertiary);
+
+}
+
+.ListContainer h3 {
+    text-decoration: underline solid 1px var(--tertiary);
+}
+
+.ListContainer h4 {
+
+}    
+
+.SettingsTheme {
+    border-top: 1px var(--tertiary) solid;
+}
+
+.SettingsTheme:last-of-type {
+    border-top: 1px var(--tertiary) solid;
+    border-bottom: 1px var(--tertiary) solid;
+}
+
+.SettingsTheme:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsCard:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsBG:hover {
+    background-color: var(--secondary10);
+}
+
+.SettingsCategory {
+    border-top: dashed 2px var(--tertiary);
 }
 
 #TextContainer {
@@ -169,4 +228,42 @@ footer {
 
 #UserInput {
     background-color: var(--secondary);
+}
+
+.numbers {
+    color: var(--tertiary);
+}
+
+#Container {
+    border: solid 2px var(--tertiary);
+}
+
+.C1 {
+    border-top: solid 2px var(--tertiary);
+    border-right: solid 1px var(--tertiary);
+    border-bottom: solid 2px var(--tertiary);
+    border-left: solid 2px var(--tertiary);
+}
+
+.C2 {
+    border-top: solid 2px var(--tertiary);
+    border-right: solid 2px var(--tertiary);
+    border-bottom: solid 2px var(--tertiary);
+    border-left: solid 1px var(--tertiary);
+}
+
+.greenC {
+    color: rgb(55, 180, 55);
+}
+
+.greenB {
+    background-color: rgb(55, 180, 55);
+}
+
+.redC {
+    color: rgb(247, 72, 72);
+}
+
+.redB {
+    background-color: rgb(247, 72, 72);
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
 #CardContainer {
-    margin: auto;
+    margin: 0 auto 80px;
     display: flex;
     flex-wrap: wrap;
     width: 1600px;

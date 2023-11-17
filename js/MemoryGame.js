@@ -19,10 +19,15 @@ var seconds = 0;
 var timerStarted = false;
 // Acts as a toggle switch for opening the leaderboard.
 var leaderboardT = true;
+// Holds the user selected card image.
+var cardImage;
+// Stores the user settings from local storage.
+var obj = {};
 
 
 // This event listener function will run some code when all of the HTML elements have loaded.
 window.addEventListener("load", () => {
+    obj = JSON.parse(localStorage.getItem("Settings"));
     document.getElementById("RestartGui").style.display = "none";
     document.getElementById("StartGame").addEventListener("click", () => {
         numberOfCards = Number(document.getElementById("cardNumber").value);
@@ -131,7 +136,24 @@ function setCards() {
             card.id = "c" + cardOrder[i];
             let img = document.createElement("img");
             if(data.revealed === false) {
-                var file = "../images/Cards/card_back4.svg";
+                var file;
+                switch(obj.card) {
+                    case "1":
+                        file = "../images/Cards/card_back1.svg";
+                    break;
+                    case "2":
+                        file = "../images/Cards/card_back2.svg";
+                    break;
+                    case "3":
+                        file = "../images/Cards/card_back3.svg";
+                    break;
+                    case "4":
+                        file = "../images/Cards/card_back4.svg";
+                    break;
+                    default:
+                        file = "../images/Cards/card_back1.svg";
+                    break;
+                }
                 img.className = "CardImg";
             }
             else {
