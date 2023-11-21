@@ -18,6 +18,11 @@ var leaderboardT = true;
 
 import wordList from '../json/words.json' assert { type: 'json' };
 
+window.onerror = function(msg, url, linenumber) {
+    alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+    return true;
+}
+
 window.addEventListener("load", () => {
     document.getElementById("RestartGui").style.display = "none";
     document.getElementById("StartGame").addEventListener("click", () => {

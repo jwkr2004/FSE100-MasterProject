@@ -192,10 +192,10 @@ function clickCard(event) {
         let div = event.currentTarget;
         let cardNum = div.id.substring(1);
         if(cardData[cardNum].revealed === false) {
-            playSound("Flip")
-            clickCount++
+            playSound("Flip");
+            clickCount++;
             document.getElementById("score").innerText = clickCount;
-            cardData[cardNum].revealed = true
+            cardData[cardNum].revealed = true;
             setCards();
             checkMatch();
         }
