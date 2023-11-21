@@ -34,6 +34,7 @@
 
 .ListContainer li {
     margin: 6px 0;
+    font-weight: 200;
 }
 
 .ListContainer ul {
@@ -42,7 +43,7 @@
 }
 
 .ListContainer p {
-    margin: auto;
+    margin: auto;   
     max-width: 90%;
 }
 

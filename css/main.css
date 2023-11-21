@@ -397,6 +397,7 @@ footer>h2 {
 }
 
 #RestartGui {
+    display: none;
     width: 500px;
     max-width: 95%;
     padding: 20px 10px;
