@@ -196,12 +196,8 @@ body, html {
     font-size: 28px;
 }
 
-footer {
-    font-size: 14px;
-}
-
-.H2 {
-    font-size: 1.8rem
+footer h2 {
+    font-size: 20px;
 }
 
 .DivSecondary {
@@ -274,6 +270,7 @@ footer {
     width: 100%;
     max-width: 100%;
     height: 60px;
+    max-height: fit-content;
     /* height: 50px; */
     /* position: fixed; */
     /* bottom: 0;*/
@@ -496,8 +493,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 @media screen and (max-width: 390px) {
-    footer {
-        font-size: 11px;
+    footer h2 {
+        font-size: 15px;
     }
 }
 
@@ -508,8 +505,8 @@ input[type=number]::-webkit-outer-spin-button {
     .H3, .Line {
         font-size: 22px;
     }
-    footer {
-        font-size: 8px;
+    footer h2 {
+        font-size: 12px;
     }
 }
 

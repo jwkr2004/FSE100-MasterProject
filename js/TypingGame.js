@@ -21,9 +21,16 @@ var gameOver = false;
 
 var leaderboardT = true;
 
-import wordList from '../json/words.json' assert { type: 'json' };
+var wordList;
+
+// import wordList from '../json/words.json' assert { type: 'json' };
 
 window.addEventListener("load", () => {
+    fetch("../json/words.json") 
+        .then((res) => { 
+        return res.json(); 
+    }) 
+    .then((data) => wordList = data); 
     // document.getElementById("RestartGui").style.display = "none";
     document.getElementById("StartGame").addEventListener("click", () => {
         numberOfWords = Number(document.getElementById("wordNumber").value);
