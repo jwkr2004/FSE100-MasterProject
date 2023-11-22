@@ -226,7 +226,7 @@ function checkInput(event) {
     // var word = array[counter];
     // var wordArray = word.split("");
 
-    var inpArray = inp.value.split(" ");
+    var inpArray = inp.value.toLowerCase().split(" ");
     
     // console.log(inpArray);
     // console.log(array);
