@@ -25,8 +25,13 @@
 }
 
 body, html {
+    background-color: var(--secondary);
+}
+
+.Wrapper {
     background-color: var(--primary);
 }
+
 
 .DivTitle {
     text-shadow: 2px 2px var(--primary);

@@ -26,6 +26,10 @@
 }
 
 body, html {
+    background-color: var(--secondary);
+}
+
+.Wrapper {
     background-color: var(--primary);
 }
 

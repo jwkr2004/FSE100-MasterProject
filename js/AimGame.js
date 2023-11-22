@@ -43,6 +43,9 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("load", () => {
+    document.querySelectorAll(".gunshot").forEach((elem) => {
+        elem.volume = 0.20;
+    });
     obj = JSON.parse(localStorage.getItem("Settings"));
 
     let bgImg = document.getElementById("Container");
@@ -66,6 +69,7 @@ window.addEventListener("load", () => {
         if(timerStarted === true) {
             totalClicks++;
             updateGraphics();
+            playSound();
         }
     });
     document.getElementById("RestartGame").addEventListener("click", () => {
@@ -116,6 +120,22 @@ function startGame() {
     }
 }
 
+function playSound() {
+    var num = Math.floor(Math.random() * 3);
+
+    if(num === 0) {
+        document.getElementById("gunshot1").load();
+        document.getElementById("gunshot1").play();
+    }
+    else if(num === 1) {
+        document.getElementById("gunshot2").load();
+        document.getElementById("gunshot2").play();
+    }
+    else if(num === 2) {
+        document.getElementById("gunshot3").load();
+        document.getElementById("gunshot3").play();
+    }
+}
 
 function setPosition(resize) {
     document.getElementById("Container").style.height = document.getElementById("Container").clientWidth * (9/16) + "px";
