@@ -43,6 +43,7 @@
 }
 
 .ListContainer p {
+    font-size: 18px;
     margin: auto;   
     max-width: 90%;
 }
