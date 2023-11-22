@@ -61,8 +61,8 @@ window.addEventListener("load", () => {
             document.querySelectorAll(".Card").forEach((div) => {
                 div.addEventListener("click", clickCard);
             });
+            document.getElementById("NumContainer").hidden = false;
         }
-        document.getElementById("NumContainer").hidden = false;
     });
     document.getElementById("AddToBoard").addEventListener("click", addToLeaderboard);
     document.getElementById("Leaderboard").addEventListener("click", leaderboardToggle);
